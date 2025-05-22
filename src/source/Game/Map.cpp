@@ -213,6 +213,7 @@ void Map::updateSnake() {
             exit(EXIT_FAILURE);
         }
     }
+    snakeBody.insert(snakeBody.begin(), newVertex);
     // 检测食物
     if(newVertex != food) {
         snakeBody.pop_back();
@@ -236,7 +237,6 @@ void Map::updateSnake() {
         // 2. 赋予新的食物坐标
         food = newFood;
     }
-    snakeBody.insert(snakeBody.begin(), newVertex);
 
     error.checkOpenGLError("before updateVertexData error!");
     updateVertexData();
