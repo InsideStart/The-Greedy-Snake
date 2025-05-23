@@ -18,7 +18,6 @@ int main(int argc, char **argv)
         std::cerr << "glfw init failed." << std::endl;
         exit(EXIT_FAILURE);
     }
-    printf("1 main.\n");
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,5);
